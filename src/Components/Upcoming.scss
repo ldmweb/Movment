@@ -1,0 +1,19 @@
+.upcoming {
+  background-color: #282931;
+  height: 1700px;
+  border-radius: 20px;
+  margin-right: 30px;
+  padding: 1rem;
+}
+
+.upcomingTitle {
+  color: #fff;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+@media (max-width: 767.98px) {
+  .upcoming {
+    display: none;
+  }
+}

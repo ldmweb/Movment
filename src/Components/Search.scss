@@ -1,0 +1,27 @@
+.searchField {
+  font-size: 16px;
+  display: block;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  border-radius: 9px;
+  border: none;
+  outline: none;
+  background-color: #282930;
+  font-weight: 600;
+  color: #fff;
+}
+
+::placeholder {
+  color: #b4b4b4;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #b4b4b4;
+}
+
+::-ms-input-placeholder {
+  color: #b4b4b4;
+}

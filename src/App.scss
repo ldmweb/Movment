@@ -16,3 +16,18 @@
   color: #dbdbdb;
   margin-bottom: -20px;
 }
+
+.filters {
+  display: flex;
+  justify-content: space-evenly;
+  color: #dbdbdb;
+  align-items: center;
+  cursor: pointer;
+}
+
+.active {
+  background: -webkit-linear-gradient(45deg, #fe4043 0%, #faa070 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}

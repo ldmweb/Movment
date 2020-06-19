@@ -1,23 +1,23 @@
 import React from "react";
 import Columns from "react-bulma-components/lib/components/columns";
 
-import "./Upcoming.scss";
-import UpcomingContainer from "./UpcomingContainer";
+import "./NowPlaying.scss";
+import NowPlayingContainer from "./NowPlayingContainer";
 
-class Upcoming extends React.Component {
+class NowPlaying extends React.Component {
   render() {
     const { movies } = this.props;
     return (
-      <Columns.Column className="upcoming">
+      <Columns.Column className="NowPlaying">
         <Columns>
           <Columns.Column>
-            <h2 className="upcomingTitle">Upcoming in Theaters</h2>
+            <h2 className="NowPlayingTitle">NowPlaying in Theaters</h2>
           </Columns.Column>
         </Columns>
         <Columns>
           <Columns.Column>
             {" "}
-            <UpcomingContainer movies={movies}></UpcomingContainer>
+            <NowPlayingContainer movies={movies}></NowPlayingContainer>
           </Columns.Column>
         </Columns>
         {/* <Link
@@ -32,4 +32,4 @@ class Upcoming extends React.Component {
   }
 }
 
-export default Upcoming;
+export default NowPlaying;

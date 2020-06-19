@@ -48,10 +48,9 @@ class Movie extends React.Component {
         >
           <Columns
             style={{
-              backgroundImage: `url(https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/${this.props.movie.backdrop_path})`,
-              zIndex: 1,
+              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(30, 31, 37, 1)), url(https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/${this.props.movie.backdrop_path})`,
             }}
-            className="headerModal"
+            className="headerModal disableBlur"
             onClick={this.handleCloseModal}
           ></Columns>
           <Columns className="modalInfos">

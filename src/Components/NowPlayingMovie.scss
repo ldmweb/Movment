@@ -1,4 +1,4 @@
-.upcomingImgCard {
+.NowPlayingImgCard {
   border-radius: 4px;
   overflow: hidden;
   -webkit-box-shadow: 4px 4px 19px -8px rgba(0, 0, 0, 0.75);
@@ -17,23 +17,23 @@
   margin-top: 5px;
 }
 
-.upcomingMovieCard {
+.NowPlayingMovieCard {
   flex: 0 0 100%;
   padding: 0.6rem;
   cursor: pointer;
 }
 
-.upcomingTitle strong {
+.NowPlayingTitle strong {
   color: white;
   font-weight: 600;
   font-size: 15px;
 }
 
-.upcomingDate {
+.NowPlayingDate {
   color: #b4b4b4;
 }
 
-.upcomingRate {
+.NowPlayingRate {
   margin-top: 20px;
   background: -webkit-linear-gradient(45deg, #fe4043 0%, #faa070 100%);
   -webkit-background-clip: text;
@@ -41,7 +41,6 @@
   font-size: 12px;
   font-weight: 700;
 }
-
 .Modal {
   position: absolute;
   overflow: hidden;
@@ -53,6 +52,35 @@
   border: none;
   border-radius: 20px;
   outline: none;
+  animation-name: modalFade;
+  animation-duration: 0.5s;
+}
+
+.fadeOut {
+  animation-name: modalFadeOut;
+  animation-duration: 0.5s;
+}
+
+@keyframes modalFade {
+  from {
+    transform: translateY(-2%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes modalFadeOut {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-2%);
+    opacity: 0;
+  }
 }
 
 .Overlay {
@@ -61,7 +89,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.97);
   border: none;
   outline: none;
 }

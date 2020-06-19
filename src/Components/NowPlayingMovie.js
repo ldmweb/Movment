@@ -2,9 +2,9 @@ import React from "react";
 import Modal from "react-modal";
 import Columns from "react-bulma-components/lib/components/columns";
 
-import "./upcomingMovie.scss";
+import "./NowPlayingMovie.scss";
 
-class UpcomingMovie extends React.Component {
+class NowPlayingMovie extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -30,11 +30,11 @@ class UpcomingMovie extends React.Component {
 
   render() {
     return (
-      <div className="upcomingMovieCard">
+      <div className="NowPlayingMovieCard">
         <Columns onClick={this.handleOpenModal.bind(this)}>
           <Columns.Column size="one-quarter">
             <img
-              className="upcomingImgCard"
+              className="NowPlayingImgCard"
               src={
                 "https://image.tmdb.org/t/p/w185" + this.props.movie.poster_path
               }
@@ -42,13 +42,13 @@ class UpcomingMovie extends React.Component {
             />
           </Columns.Column>
           <Columns.Column>
-            <h1 className="upcomingTitle">
+            <h1 className="NowPlayingTitle">
               <strong>{this.props.movie.title}</strong>
             </h1>
-            <p className="upcomingDate">{this.props.movie.release_date}</p>
+            <p className="NowPlayingDate">{this.props.movie.release_date}</p>
           </Columns.Column>
-          <Columns.Column size="one-fifth" className="upcomingRate">
-            <p className="upcomingDate">{this.props.movie.vote_average}</p>
+          <Columns.Column size="one-fifth" className="NowPlayingRate">
+            <p className="NowPlayingDate">{this.props.movie.vote_average}</p>
           </Columns.Column>
         </Columns>
 
@@ -61,8 +61,7 @@ class UpcomingMovie extends React.Component {
         >
           <Columns
             style={{
-              backgroundImage: `url(https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/${this.props.movie.backdrop_path})`,
-              zIndex: 1,
+              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(30, 31, 37, 1)), url(https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/${this.props.movie.backdrop_path})`,
             }}
             className="headerModal"
             onClick={this.handleCloseModal}
@@ -115,4 +114,4 @@ class UpcomingMovie extends React.Component {
   }
 }
 
-export default UpcomingMovie;
+export default NowPlayingMovie;
